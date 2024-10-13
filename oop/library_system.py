@@ -28,7 +28,16 @@ class Library(Book):
         self.books = []
 
     def add_book(self, book):
-        self.books.append(book)
+        if book is not in self.books:
+            self.books.append(book)
+
+    def list_books(self):
+        if self.books:
+            for item in self.books:
+                print(item)
+        else:
+            print("The library is currently empty.")
+            
     def __str__(self, title, author):
         return f"Book: {self.title} by {self.author}"
     
