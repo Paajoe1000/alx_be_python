@@ -28,7 +28,7 @@ class Library(Book):
         self.books = []
 
     def add_book(self, book):
-        if book is not in self.books:
+        if book not in self.books:
             self.books.append(book)
 
     def list_books(self):
@@ -37,17 +37,3 @@ class Library(Book):
                 print(item)
         else:
             print("The library is currently empty.")
-            
-    def __str__(self, title, author):
-        return f"Book: {self.title} by {self.author}"
-    
-    def __str__(self, title, author, file_size):
-        self.file_size = int(file_size)
-        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}"
-    
-    def __str__(self, title, author, page_count):
-        self.page_count = int(page_count)
-        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
-
-    def list_books(self):
-        self.books()
