@@ -27,3 +27,7 @@ def main():
     my_library.add_book(paper_novel)
 
     my_library.list_books()
+
+if __name__ == "__main__":
+    main()
+    
